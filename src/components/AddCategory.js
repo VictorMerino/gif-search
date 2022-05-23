@@ -5,13 +5,14 @@ export const AddCategory = () => {
   const handleInputChange = e => {
     setInputValue(e.target.value)
   }
-  const handleAddCategory = () => {
-    console.log('Handle addCategory')
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(inputValue)
+
     // setCategories([...categories, 'Chumifly'])
   }
   return (
-    <>
-      AddCategory
+    <form onClick={handleSubmit}>
       <input
         type="text"
         name="category"
@@ -19,7 +20,7 @@ export const AddCategory = () => {
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button onClick={handleAddCategory}>Add category</button>
-    </>
+      <button>Add category</button>
+    </form>
   )
 }
