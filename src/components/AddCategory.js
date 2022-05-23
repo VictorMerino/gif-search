@@ -11,8 +11,6 @@ export const AddCategory = ({ addCategory }) => {
 
     addCategory(inputValue)
     setInputValue('')
-
-    // setCategories([...categories, 'Chumifly'])
   }
   return (
     <form onSubmit={handleSubmit}>
