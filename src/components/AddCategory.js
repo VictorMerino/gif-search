@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({ addCategory }) => {
   const [inputValue, setInputValue] = useState('')
@@ -25,4 +26,8 @@ export const AddCategory = ({ addCategory }) => {
       <button>Add category</button>
     </form>
   )
+}
+
+AddCategory.propTypes = {
+  addCategory: PropTypes.func.isRequired,
 }
