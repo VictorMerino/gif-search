@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const GifExpertApp = () => {
-  const categories = ['Manga', 'Anime', 'Comedia', 'Acción']
+  // const categories = ['Manga', 'Anime', 'Comedia', 'Acción']
+  const [categories, setCategories] = useState([
+    'Manga',
+    'Anime',
+    'Comedia',
+    'Acción',
+  ])
   return (
     <>
       <h2>GifExpertApp</h2>
