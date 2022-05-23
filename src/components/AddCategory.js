@@ -7,8 +7,9 @@ export const AddCategory = ({ addCategory }) => {
   }
   const handleSubmit = e => {
     e.preventDefault()
+
     addCategory(inputValue)
-    console.log(inputValue)
+    setInputValue('')
 
     // setCategories([...categories, 'Chumifly'])
   }
