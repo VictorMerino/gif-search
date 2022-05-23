@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory'
 
 const GifExpertApp = () => {
   // const categories = ['Manga', 'Anime', 'Comedia', 'Acción']
@@ -20,7 +21,8 @@ const GifExpertApp = () => {
           <li key={i}>{category}</li>
         ))}
       </ul>
-      <button onClick={handleAddCategory}>Add category</button>
+
+      <AddCategory />
     </>
   )
 }
