@@ -9,9 +9,7 @@ const GifExpertApp = () => {
     'Comedia',
     'Acción',
   ])
-  const handleAddCategory = () => {
-    setCategories([...categories, 'Chumifly'])
-  }
+  const addCategory = newCategory => setCategories([...categories, newCategory])
   return (
     <>
       <h2>GifExpertApp</h2>
@@ -22,7 +20,7 @@ const GifExpertApp = () => {
         ))}
       </ul>
 
-      <AddCategory />
+      <AddCategory addCategory={addCategory} />
     </>
   )
 }
