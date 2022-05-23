@@ -8,6 +8,9 @@ const GifExpertApp = () => {
     'Comedia',
     'Acción',
   ])
+  const handleAddCategory = () => {
+    setCategories([...categories, 'Chumifly'])
+  }
   return (
     <>
       <h2>GifExpertApp</h2>
@@ -17,6 +20,7 @@ const GifExpertApp = () => {
           <li key={i}>{category}</li>
         ))}
       </ul>
+      <button onClick={handleAddCategory}>Add category</button>
     </>
   )
 }
