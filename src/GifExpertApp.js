@@ -6,6 +6,11 @@ const GifExpertApp = () => {
     <>
       <h2>GifExpertApp</h2>
       <hr></hr>
+      <ul>
+        {categories.map((category, i) => (
+          <li key={i}>{category}</li>
+        ))}
+      </ul>
     </>
   )
 }
