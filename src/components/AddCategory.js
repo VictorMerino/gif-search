@@ -35,7 +35,7 @@ export const AddCategory = ({ addCategory }) => {
           borderColor: '#ececec',
         }}
       >
-        Add category
+        Search
       </button>
     </form>
   )

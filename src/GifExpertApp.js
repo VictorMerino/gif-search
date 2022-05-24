@@ -7,7 +7,7 @@ const GifExpertApp = () => {
   const addCategory = newCategory => setCategory(newCategory)
   return (
     <div className="container">
-      <h2>GifExpertApp</h2>
+      <h2>Search a category of gifs:</h2>
       <hr></hr>
       <div className="grid">
         <AddCategory addCategory={addCategory} />
