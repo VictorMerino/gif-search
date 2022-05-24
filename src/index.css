@@ -6,6 +6,7 @@ body{
   margin: 0;
   padding-block: min(5vh, 5rem);
   padding-inline: 2em;
+  background-color: #ececec;
 }
 
 .container {
