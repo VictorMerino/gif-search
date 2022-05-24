@@ -4,18 +4,19 @@ import GifList from './components/GifList'
 
 const GifExpertApp = () => {
   // const categories = ['Manga', 'Anime', 'Comedia', 'Acción']
-  const [categories, setCategories] = useState(['Manga'])
-  const addCategory = newCategory => setCategories([...categories, newCategory])
+  const [category, setCategory] = useState('Manga')
+  const addCategory = newCategory => setCategory(newCategory)
   return (
     <div className="container">
       <h2>GifExpertApp</h2>
       <hr></hr>
+      <div className="grid">
+        <AddCategory addCategory={addCategory} />
 
-      {categories.map((category, i) => (
-        <GifList key={'Cat' + i} category={category} />
-      ))}
+        <h2 style={{ margin: 0, paddingTop: '10px' }}>{category}</h2>
+      </div>
 
-      <AddCategory addCategory={addCategory} />
+      <GifList category={category} />
     </div>
   )
 }

@@ -18,10 +18,25 @@ export const AddCategory = ({ addCategory }) => {
         type="text"
         name="category"
         id="category"
+        style={{
+          padding: '1em',
+          'border-top-left-radius': '1em',
+          'border-bottom-left-radius': '1em',
+          'border-color': '#ececec',
+        }}
         value={inputValue}
         onChange={handleInputChange}
       />
-      <button>Add category</button>
+      <button
+        style={{
+          padding: '1em',
+          'border-top-right-radius': '1em',
+          'border-bottom-right-radius': '1em',
+          'border-color': '#ececec',
+        }}
+      >
+        Add category
+      </button>
     </form>
   )
 }
