@@ -5,3 +5,16 @@ html{
 body{
   padding: 2em;
 }
+
+.gifs-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-columns {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr))
+}
+
+img {
+  max-width: 100%;
+}
