@@ -15,7 +15,7 @@ const GifList = ({ category }) => {
     <>
       <hr />
       {loading ? (
-        <p>loading</p>
+        <p className="animate__animated animate__flash">loading</p>
       ) : (
         <div className="gifs-grid grid-columns">
           {images.map(image => (

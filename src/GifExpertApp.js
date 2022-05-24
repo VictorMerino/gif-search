@@ -3,7 +3,6 @@ import { AddCategory } from './components/AddCategory'
 import GifList from './components/GifList'
 
 const GifExpertApp = () => {
-  // const categories = ['Manga', 'Anime', 'Comedia', 'Acción']
   const [category, setCategory] = useState('Manga')
   const addCategory = newCategory => setCategory(newCategory)
   return (
@@ -13,7 +12,12 @@ const GifExpertApp = () => {
       <div className="grid">
         <AddCategory addCategory={addCategory} />
 
-        <h2 style={{ margin: 0, paddingTop: '10px' }}>{category}</h2>
+        <h2
+          className="animate__animated animate__fadeIn"
+          style={{ margin: 0, paddingTop: '10px' }}
+        >
+          {category}
+        </h2>
       </div>
 
       <GifList category={category} />
