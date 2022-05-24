@@ -20,9 +20,9 @@ export const AddCategory = ({ addCategory }) => {
         id="category"
         style={{
           padding: '1em',
-          'border-top-left-radius': '1em',
-          'border-bottom-left-radius': '1em',
-          'border-color': '#ececec',
+          borderTopLeftRadius: '1em',
+          borderBottomLeftRadius: '1em',
+          borderColor: '#ececec',
         }}
         value={inputValue}
         onChange={handleInputChange}
@@ -30,9 +30,9 @@ export const AddCategory = ({ addCategory }) => {
       <button
         style={{
           padding: '1em',
-          'border-top-right-radius': '1em',
-          'border-bottom-right-radius': '1em',
-          'border-color': '#ececec',
+          borderTopRightRadius: '1em',
+          borderBottomRightRadius: '1em',
+          borderColor: '#ececec',
         }}
       >
         Add category
