@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const GifList = ({ category }) => {
+  const [images, setImages] = useState([])
+  useEffect(() => {
+    getGifList()
+  }, [])
   const getGifList = async () => {
     try {
       const giphyApiKey = process.env.REACT_APP_GIPHY_API_KEY
       const query = category
       const limit = 10
       const url = `http://api.giphy.com/v1/gifs/search?api_key=${giphyApiKey}&q=${query}&limit=${limit}`
+
       const resp = await fetch(url)
       const { data } = await resp.json()
 
@@ -17,6 +22,8 @@ const GifList = ({ category }) => {
           image: images?.downsized_medium.url,
         }
       })
+
+      setImages(gifs)
       console.log(gifs)
 
       return url
@@ -26,8 +33,18 @@ const GifList = ({ category }) => {
       return error
     }
   }
-  getGifList()
-  return <div>{category}</div>
+  return (
+    <div>
+      {category}
+      <hr />
+      <ul>
+        {images.map((image, i) => (
+          <li key={i}>{image.title}</li>
+        ))}
+      </ul>
+      <button onClick={getGifList}>Get gifs</button>
+    </div>
+  )
 }
 
 export default GifList
