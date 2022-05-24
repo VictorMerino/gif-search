@@ -8,6 +8,11 @@ body{
   padding-inline: 2em;
 }
 
+.container {
+  max-width: 980px;
+  margin-inline: auto
+}
+
 .gifs-grid {
   display: grid;
   gap: 1rem;
