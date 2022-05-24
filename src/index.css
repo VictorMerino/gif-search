@@ -12,6 +12,11 @@ body{
   max-width: 980px;
   margin-inline: auto
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1080px;
+  }
+}
 
 .gifs-grid {
   display: grid;
