@@ -38,8 +38,8 @@ const GifList = ({ category }) => {
       {category}
       <hr />
       <ul>
-        {images.map((image, i) => (
-          <li key={i}>{image.title}</li>
+        {images.map(image => (
+          <li key={image.id}>{image.title}</li>
         ))}
       </ul>
       <button onClick={getGifList}>Get gifs</button>
