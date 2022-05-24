@@ -7,7 +7,7 @@ const GifExpertApp = () => {
   const [categories, setCategories] = useState(['Manga'])
   const addCategory = newCategory => setCategories([...categories, newCategory])
   return (
-    <div class="container">
+    <div className="container">
       <h2>GifExpertApp</h2>
       <hr></hr>
 
