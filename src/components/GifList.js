@@ -20,12 +20,11 @@ const GifList = ({ category }) => {
         return {
           id,
           title,
-          image: images?.downsized_medium.url,
+          url: images?.downsized_medium.url,
         }
       })
 
       setImages(gifs)
-      console.log(gifs)
 
       return url
     } catch (error) {

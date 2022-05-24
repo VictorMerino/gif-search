@@ -1,5 +1,9 @@
 const GifItem = ({ item }) => {
-  return <p>{item.title}</p>
+  return (
+    <>
+      <img src={item.url} alt={item.title} />
+    </>
+  )
 }
 
 export default GifItem
