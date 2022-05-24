@@ -3,7 +3,9 @@ html{
 }
 
 body{
-  padding: 2em;
+  margin: 0;
+  padding-block: min(5vh, 5rem);
+  padding-inline: 2em;
 }
 
 .gifs-grid {

@@ -11,11 +11,9 @@ const GifExpertApp = () => {
       <h2>GifExpertApp</h2>
       <hr></hr>
 
-      <ul>
-        {categories.map((category, i) => (
-          <GifList key={'Cat' + i} category={category} />
-        ))}
-      </ul>
+      {categories.map((category, i) => (
+        <GifList key={'Cat' + i} category={category} />
+      ))}
 
       <AddCategory addCategory={addCategory} />
     </>

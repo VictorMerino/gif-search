@@ -34,14 +34,16 @@ const GifList = ({ category }) => {
     }
   }
   return (
-    <div className="gifs-grid grid-columns">
+    <>
       {category}
       <hr />
-      {images.map(image => (
-        <GifItem key={image.id} item={image} />
-      ))}
-      <button onClick={getGifList}>Get gifs</button>
-    </div>
+      <div className="gifs-grid grid-columns">
+        {images.map(image => (
+          <GifItem key={image.id} item={image} />
+        ))}
+        <button onClick={getGifList}>Get gifs</button>
+      </div>
+    </>
   )
 }
 
