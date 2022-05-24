@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import GifItem from './GifItem'
 
 const GifList = ({ category }) => {
   const [images, setImages] = useState([])
@@ -38,8 +39,8 @@ const GifList = ({ category }) => {
       {category}
       <hr />
       <ul>
-        {images.map(({ id, title }) => (
-          <li key={id}>{title}</li>
+        {images.map(image => (
+          <GifItem key={image.id} item={image} />
         ))}
       </ul>
       <button onClick={getGifList}>Get gifs</button>
