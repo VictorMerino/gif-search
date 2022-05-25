@@ -19,10 +19,12 @@ body{
   }
 }
 
-.grid {
-  display: grid;
-  column-count: 2;
-  grid-template-columns: 66.667% 33.334%;
+@media screen and (min-width: 600px) {
+  .grid {
+    display: grid;
+    column-count: 2;
+    grid-template-columns: 66.667% 33.334%;
+  }
 }
 
 .gifs-grid {
