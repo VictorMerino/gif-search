@@ -8,6 +8,6 @@ const item = {
 describe('GifItem', () => {
   test('should show item with class', /* async */ () => {
     render(<GifItem item={item} />)
-    screen.getByAltText(item.title)
+    expect(screen.getByAltText(item.title).outerHTML).toContain(item.id)
   })
 })
