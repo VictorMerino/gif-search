@@ -19,7 +19,7 @@ describe('AddCategory', () => {
     fireEvent.submit(form)
     expect(input.value).toBe('')
 
-    expect(addCategorySpy).toHaveBeenCalled()
+    expect(addCategorySpy).toHaveBeenCalledTimes(1)
   })
 
   test('should not send form if input length is less than 2', async () => {
