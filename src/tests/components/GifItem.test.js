@@ -8,6 +8,6 @@ const item = {
 describe('GifItem', () => {
   test('should show item with alt text', () => {
     render(<GifItem item={item} />)
-    expect(screen.getByAltText(item.title).outerHTML).toContain(item.id)
+    expect(screen.getByAltText(item.title)).toHaveAttribute('src', item.url)
   })
 })
