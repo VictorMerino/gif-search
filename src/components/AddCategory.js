@@ -18,6 +18,7 @@ const AddCategory = ({ addCategory }) => {
         type="text"
         name="category"
         id="category"
+        data-testid="add-input"
         style={{
           padding: '1em',
           borderTopLeftRadius: '1em',
@@ -28,6 +29,7 @@ const AddCategory = ({ addCategory }) => {
         onChange={handleInputChange}
       />
       <button
+        data-testid="add-button"
         style={{
           padding: '1em',
           borderTopRightRadius: '1em',
