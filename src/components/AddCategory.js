@@ -8,12 +8,13 @@ const AddCategory = ({ addCategory }) => {
   }
   const handleSubmit = e => {
     e.preventDefault()
+    console.log('submit called')
 
     addCategory(inputValue)
     setInputValue('')
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form aria-label="form" onSubmit={handleSubmit}>
       <input
         type="text"
         name="category"
