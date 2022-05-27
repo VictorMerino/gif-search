@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import AddCategory from './components/AddCategory'
 import GifList from './components/GifList'
 
-const GifExpertApp = () => {
-  const [category, setCategory] = useState('Manga')
+const GifExpertApp = ({ defaultCategory = 'Manga' }) => {
+  const [category, setCategory] = useState(defaultCategory)
   const addCategory = newCategory => setCategory(newCategory)
   return (
     <div className="container">
