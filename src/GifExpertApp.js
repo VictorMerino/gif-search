@@ -8,7 +8,6 @@ const GifExpertApp = ({ defaultCategory = 'Manga' }) => {
   return (
     <div className="container">
       <h1>Search a category of gifs:</h1>
-      <hr></hr>
       <div className="grid">
         <AddCategory addCategory={addCategory} />
 
