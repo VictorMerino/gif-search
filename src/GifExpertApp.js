@@ -20,7 +20,7 @@ const GifExpertApp = ({ defaultCategory = 'Manga' }) => {
         </h2>
       </div>
 
-      <GifList category={category} />
+      <GifList data-testid="gifList" category={category} />
     </div>
   )
 }
