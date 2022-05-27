@@ -1,10 +1,18 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import GifExpertApp from '../GifExpertApp'
+import GifList from '../../components/GifList'
 
-describe('GifExpertApp', () => {
+/**
+ * Counter app should:
+ * show default value
+ * substract
+ * add
+ * reset
+ */
+
+describe.skip('GifList', () => {
   const defaultValue = 0
   test('should show default value', () => {
-    render(<GifExpertApp />)
+    render(<GifList />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('gif')
   })
 })
