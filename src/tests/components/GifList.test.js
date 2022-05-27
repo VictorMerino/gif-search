@@ -15,7 +15,7 @@ describe('GifList', () => {
     const loadingElement = screen.getByTestId('loading')
     expect(loadingElement).toHaveClass('animate__flash')
   })
-  test.only('should show a list of gifs based on a category', () => {
+  test('should show a list of gifs based on a category', () => {
     const data = [
       {
         id: 'id1',
@@ -35,6 +35,8 @@ describe('GifList', () => {
     render(<GifList category="Vegeta" />)
     const imagesWrapper = screen.getByTestId('imagesWrapper')
 
-    expect(imagesWrapper.outerHTML).toContain(data[1].url)
+    data.forEach((element, i) => {
+      expect(imagesWrapper.outerHTML).toContain(data[i].url)
+    })
   })
 })
