@@ -2,17 +2,35 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import AddCategory from '../../components/AddCategory'
 
 describe('AddCategory', () => {
-  const addCategory = () => {}
+  const addCategorySpy = jest.fn()
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
   test('should show item with alt text', async () => {
-    render(<AddCategory addCategory={addCategory} />)
+    render(<AddCategory addCategory={addCategorySpy} />)
     const addInput = await screen.findByTestId('add-input')
 
     const form = await screen.findByRole('form')
-    const newInputValue = { target: { value: 'Nobita' } }
+    const newValue = 'Nobita'
+    const newInputValue = { target: { value: newValue } }
+    const input = await screen.findByTestId('add-input')
+    fireEvent.change(addInput, newInputValue)
+    expect(input.value).toBe(newValue)
+    fireEvent.submit(form)
+    expect(input.value).toBe('')
+
+    expect(addCategorySpy).toHaveBeenCalled()
+  })
+
+  test('should not send form if input length is less than 2', async () => {
+    render(<AddCategory addCategory={addCategorySpy} />)
+    const addInput = await screen.findByTestId('add-input')
+
+    const form = await screen.findByRole('form')
+    const newInputValue = { target: { value: '' } }
     fireEvent.change(addInput, newInputValue)
     fireEvent.submit(form)
 
-    console.log(form.outerHTML)
-    expect(true).toBe(true)
+    expect(addCategorySpy).not.toHaveBeenCalled()
   })
 })

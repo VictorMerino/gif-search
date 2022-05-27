@@ -8,8 +8,7 @@ const AddCategory = ({ addCategory }) => {
   }
   const handleSubmit = e => {
     e.preventDefault()
-    console.log('submit called')
-
+    if (inputValue.trim().length < 2) return false
     addCategory(inputValue)
     setInputValue('')
   }
