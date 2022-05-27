@@ -20,6 +20,7 @@ describe('AddCategory', () => {
     expect(input.value).toBe('')
 
     expect(addCategorySpy).toHaveBeenCalledTimes(1)
+    expect(addCategorySpy).toHaveBeenCalledWith(newValue)
   })
 
   test('should not send form if input length is less than 2', async () => {
