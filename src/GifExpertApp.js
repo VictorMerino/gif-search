@@ -4,12 +4,12 @@ import GifList from './components/GifList'
 
 const GifExpertApp = ({ defaultCategory = 'Manga' }) => {
   const [category, setCategory] = useState(defaultCategory)
-  const addCategory = newCategory => setCategory(newCategory)
+  const onAddCategory = newCategory => setCategory(newCategory)
   return (
     <div className="container">
       <h1>Search a category of gifs:</h1>
       <div className="grid">
-        <AddCategory addCategory={addCategory} />
+        <AddCategory onAddCategory={onAddCategory} />
 
         <h2
           className="animate__animated animate__fadeIn"
