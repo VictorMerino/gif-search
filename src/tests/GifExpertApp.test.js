@@ -12,4 +12,6 @@ describe('GifExpertApp', () => {
     const imagesWrapper = await screen.findByTestId('imagesWrapper')
     expect(imagesWrapper.outerHTML).toContain('animate__fadeIn')
   })
+  test.todo('should show search history without calling endpoint again')
+  test.todo('should load previous state if not restated it manually')
 })
